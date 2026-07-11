@@ -14,19 +14,25 @@ export default function SearchBar({
 
     <div
       className="
-        flex
-        gap-4
-        items-center
+        w-full
+        mb-8
       "
     >
 
       <input
+
         type="text"
+
         value={value}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder="Buscar..."
+
+        onChange={(e) =>
+          onChange(e.target.value)
+        }
+
+        placeholder="Buscar por nome..."
+
         className="
-          flex-1
+          w-full
           bg-white/10
           border
           border-[#c5a46e]/30
@@ -34,30 +40,16 @@ export default function SearchBar({
           px-6
           py-4
           text-xl
+          text-center
           placeholder:text-[#c5a46e]/50
           focus:outline-none
+          focus:border-[#c5a46e]
         "
+
       />
-
-
-      <button
-        onClick={() => onChange("")}
-        className="
-          px-6
-          py-4
-          border
-          border-[#c5a46e]/30
-          rounded-full
-          text-xl
-          hover:bg-white/10
-        "
-      >
-        Limpar
-      </button>
-
 
     </div>
 
-  )
+  );
 
 }

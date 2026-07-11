@@ -45,7 +45,7 @@ export default function Capa({
 
         <h1
           className="
-            text-6xl
+            text-4xl
             font-bold
             tracking-wider
             mb-4
