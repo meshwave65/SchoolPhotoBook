@@ -1,4 +1,4 @@
-import { assets } from "../assets";
+import { assets } from "../assets/index.ts";
 
 export default function Paraninfo() {
 
@@ -10,21 +10,21 @@ export default function Paraninfo() {
         src={assets.Paraninfo}
         alt="Paraninfo"
         className="
-          w-1/2
-          h-1/2
-          object-contain
-          mx-auto
-          mb-12
-        "
-      />
+                w-full
+                max-w-3xl
+                mx-auto
+                rounded-3xl
+                mb-12
+                shadow-2xl
+            "
+        />
 
-
-      <h2 className="text-5xl font-bold mb-8 text-center">
+      <h2 className="text-3xl font-bold mb-8 text-center">
         PARANINFO
       </h2>
 
 
-      <div className="text-lg leading-relaxed">
+      <div className="text-lg leading-relaxed text-center">
 
         <p>
           Prof. Dr. RODOLPHO PAULO ROCCO
