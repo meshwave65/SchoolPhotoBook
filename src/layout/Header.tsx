@@ -1,3 +1,16 @@
+export type Pagina =
+  | "capa"
+  | "apresentacao"
+  | "historia"
+  | "paraninfo"
+  | "patrono"
+  | "juramento"
+  | "formandos"
+  | "homenagens"
+  | "homenagens_admin"
+  | "falecidos";
+
+
 export default function Header() {
   return (
     <header

@@ -1,10 +1,15 @@
+import type { Pagina } from "./Header";
+
+
 interface BottomProps {
-  navegar: (pagina: string) => void;
+  navegar: (pagina: Pagina) => void;
 }
+
 
 export default function BottomNav({
   navegar,
 }: BottomProps) {
+
   return (
     <footer
       className="
@@ -24,6 +29,7 @@ export default function BottomNav({
         z-50
       "
     >
+
       <input
         type="text"
         placeholder="Buscar..."
@@ -42,6 +48,7 @@ export default function BottomNav({
         "
       />
 
+
       <button
         className="
           rounded
@@ -58,9 +65,20 @@ export default function BottomNav({
         Limpar
       </button>
 
+
       <select
         defaultValue=""
-        onChange={(e) => navegar(e.target.value)}
+
+        onChange={(e) => {
+
+          const valor = e.target.value;
+
+          if (valor) {
+            navegar(valor as Pagina);
+          }
+
+        }}
+
         className="
           rounded
           border
@@ -73,17 +91,49 @@ export default function BottomNav({
           cursor-pointer
         "
       >
-        <option value="">Índice</option>
-        <option value="apresentacao">Apresentação</option>
-        <option value="historia">História</option>
-        <option value="juramento">Juramento</option>
-        <option value="paraninfo">Paraninfo</option>
-        <option value="patrono">Patrono</option>
-        <option value="homenagens">Homenagens Especiais</option>
-        <option value="homenagens_admin">Homenagens Administrativas</option>
-        <option value="formandos">Formandos</option>
-        <option value="falecidos">Falecidos</option>
+
+        <option value="">
+          Índice
+        </option>
+
+        <option value="apresentacao">
+          Apresentação
+        </option>
+
+        <option value="historia">
+          História
+        </option>
+
+        <option value="juramento">
+          Juramento
+        </option>
+
+        <option value="paraninfo">
+          Paraninfo
+        </option>
+
+        <option value="patrono">
+          Patrono
+        </option>
+
+        <option value="homenagens">
+          Homenagens Especiais
+        </option>
+
+        <option value="homenagens_admin">
+          Homenagens Administrativas
+        </option>
+
+        <option value="formandos">
+          Formandos
+        </option>
+
+        <option value="falecidos">
+          Falecidos
+        </option>
+
       </select>
+
     </footer>
   );
 }
