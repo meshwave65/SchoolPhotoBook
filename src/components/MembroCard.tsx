@@ -44,7 +44,7 @@ export default function MembroCard({
 
         <div className="w-full text-center">
 
-          <h3 className="text-3xl font-bold mb-3">
+          <h3 className="text-2xl font-bold mb-3">
             {membro.nome}
           </h3>
 
